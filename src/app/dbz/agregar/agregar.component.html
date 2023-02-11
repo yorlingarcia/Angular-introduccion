@@ -1,0 +1,30 @@
+<h3>
+  Agregar: <small>{{ nuevo.nombre }}</small>
+</h3>
+<hr />
+<!-- <form (submit)="agregar($event)"> -->
+<form (ngSubmit)="agregar()">
+  <!-- colocar [value] apunta a la variable de la clase para establecer -->
+  <!-- <input
+        type="text"
+        placeholder="Nombre"
+        [value]="nuevo.nombre"
+        (input)="cambiarNombre($event)"
+      /> -->
+  <input
+    type="text"
+    placeholder="Nombre"
+    name="nombre"
+    [(ngModel)]="nuevo.nombre"
+  />
+  <!-- <input type="number" placeholder="Poder" [value]="nuevo.poder" /> -->
+  <input
+    type="number"
+    placeholder="Poder"
+    name="poder"
+    [(ngModel)]="nuevo.poder"
+  />
+
+  <!-- Los parentesis dentro del tag hacen parte del evento -->
+  <button>Agregar</button>
+</form>
