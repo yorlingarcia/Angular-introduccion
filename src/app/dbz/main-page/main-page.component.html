@@ -3,7 +3,7 @@
 <hr />
 <div class="row">
   <div class="col">
-    <app-personajes [personajes]="personajes"></app-personajes>
+    <app-personajes></app-personajes>
     <!-- el simbolo | sirve para transforma visualmete la informacion -->
     <!-- <h3>Personjes</h3>
     <hr />
@@ -15,9 +15,6 @@
     </ul> -->
   </div>
   <div class="col">
-    <app-agregar
-      [nuevo]="nuevo"
-      (onNuevoPersonaje)="agregarNuevoPersonaje($event)"
-    ></app-agregar>
+    <app-agregar [nuevo]="nuevo"></app-agregar>
   </div>
 </div>
