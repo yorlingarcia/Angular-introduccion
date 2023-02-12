@@ -12,8 +12,6 @@ import { DbzService } from '../services/dbz.service';
   styleUrls: ['./main-page.component.css'],
 })
 export class MainPageComponent {
-  personajes: Personaje[] = [];
-
   nuevo: Personaje = {
     nombre: 'Maestro Roshi',
     poder: 2000,
@@ -42,10 +40,11 @@ export class MainPageComponent {
   //     poder: 0,
   //   };
   // }
+  get personajes(): Personaje[] {
+    return this.dbzService.personajes;
+  }
   agregarNuevoPersonaje(argumento: Personaje) {
     this.personajes.push(argumento);
   }
-  constructor(private dbzService: DbzService) {
-    this.personajes = this.dbzService.personajes;
-  }
+  constructor(private dbzService: DbzService) {}
 }
