@@ -7,6 +7,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { AgregarComponent } from './agregar/agregar.component';
 
+import { DbzService } from './services/dbz.service';
+
 @NgModule({
   declarations: [
     MainPageComponent,
@@ -15,5 +17,6 @@ import { AgregarComponent } from './agregar/agregar.component';
   ],
   imports: [BrowserModule, CommonModule, FormsModule],
   exports: [MainPageComponent], // se debe exportar el componente para poder mostrarlo
+  providers: [DbzService], // el providers son todos los servicios
 })
 export class DbzModule {}
